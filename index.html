@@ -82,32 +82,48 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Towards Reliable Identification of Diffusion-based Image Manipulations</h1>
           <div class="is-size-5 publication-authors">
+            
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://alex-costanzino.github.io/">Alex Costanzino</a><sup>1</sup>,
             </span>
+            
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="">Woody Bayliss</a><sup>2</sup>,
             </span>
+
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="">Juil Sock</a><sup>2</sup>,
             </span>
+
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="">Marc Gorriz Blanch</a><sup>2</sup>,
             </span>
+
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="">Danijela Horak</a><sup>2</sup>,
             </span>
+
+            <span class="author-block">
+              <a href="https://mbzuai.ac.ae/study/faculty/ivan-laptev/">Ivan Laptev</a><sup>3</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://eng.ox.ac.uk/people/philip-torr/">Philip Torr</a><sup>4</sup>,
+            </span>
+
+            <span class="author-block">
+              <a href="https://fabvio.github.io/">Fabio Pizzati</a><sup>3</sup>
+            </span>
+
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>University of Bologna,</span>
+            <span class="author-block"><sup>2</sup>BBC AI</span>
+            <span class="author-block"><sup>3</sup>MBZUAI,</span>
+            <span class="author-block"><sup>4</sup>University of Oxford</span>
           </div>
 
           <div class="column has-text-centered">
@@ -186,64 +202,6 @@
 </section>
 
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -252,31 +210,19 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Changing facial expressions, gestures, or background details may dramatically alter the meaning conveyed by an image. 
+            Notably, recent advances in diffusion models greatly improve the quality of image manipulation while also opening the door to misuse. 
+            Identifying changes made to authentic images, thus, becomes an important task, constantly challenged by new diffusion-based editing tools. 
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            To this end, we propose a novel approach for <u>R</u>eli<u>A</u>ble i<u>D</u>entification of inpainted <u>AR</u>eas (RADAR). 
+            RADAR builds on existing foundation models and combines features from different image modalities. 
+            It also incorporates an auxiliary contrastive loss that helps to isolate manipulated image patches. 
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            We demonstrate these techniques to significantly improve both the accuracy of our method and its generalisation to a large number of diffusion models. 
+            To support realistic evaluation, we further introduce BBC-PAIR, a new comprehensive benchmark, with images tampered by 28 diffusion models. 
+            Our experiments show that RADAR achieves excellent results, outperforming the state-of-the-art in detecting and localising image edits made by both seen and unseen diffusion models.
           </p>
         </div>
       </div>
