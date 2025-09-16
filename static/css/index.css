@@ -155,3 +155,10 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+pre.ack-bibtex {
+  margin-left: 0;
+  padding-left: 0;
+  background: #f8f8f8; /* optional */
+  overflow-x: auto;
+}
